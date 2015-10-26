@@ -1,0 +1,106 @@
+/**
+ * @Project Name  : MSNAV
+ * @Starting Date : 26/10/2015
+ * @Discription   : style of the nav bar
+ * Version        : 0.1
+ * @Auther        : [Moustafa Ahmed]
+ */
+
+
+/**
+  * Base
+  */
+
+* {
+    box-sizing: border-box;
+}
+
+body. html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/**
+ * msNav
+ */
+
+.scroller-nav {
+    position: fixed;
+    z-index: 9;
+    top: 50%;
+    right: 7%;
+    background: rgba(242, 103, 34, 0.7);
+    padding: 20px 10px;
+    border-radius: 555px;
+    list-style: none;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.scroller-nav a {
+    font-size: 0;
+    display: block;
+    position: relative;
+    background: #eee;
+    border: 3px solid #fff;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    margin: 5px 0;
+}
+
+.scroller-nav li a.current {
+    background: #14517f;
+}
+
+.scroller-nav a:after {
+    content: '';
+    display: block;
+    background: #fff;
+    position: absolute;
+    bottom: -12px;
+    left: 3px;
+    height: 10px;
+    width: 4px;
+}
+
+.scroller-nav a:before {
+    content: '';
+    display: block;
+    background: #fff;
+    position: absolute;
+    top: -12px;
+    left: 3px;
+    height: 10px;
+    width: 4px;
+}
+
+
+/**
+ * Page Containt
+ */
+
+#firstDiv,
+#secondDiv,
+#lastDiv {
+    width: 100%;
+    height: 1000px;
+}
+
+#firstDiv {
+    background-color: #000;
+}
+
+#secondDiv {
+    background-color: #fff;
+}
+
+#lastDiv {
+    background-color: #ff0000;
+}

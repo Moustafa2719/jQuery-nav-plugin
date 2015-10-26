@@ -1,0 +1,35 @@
+<!Document>
+<html>
+
+<head>
+    <title>MSNAV PLUGIN</title>
+    <!-- the site styles -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- the site scripts -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/msNav.js"></script>
+</head>
+
+<body>
+    <!-- Nav Bar container -->
+    <ul id="nav" class="scroller-nav"></ul>
+    <!-- Page Elements -->
+    <div id="firstDiv"></div>
+    <div id="secondDiv"></div>
+    <div id="lastDiv"></div>
+    <!-- Apply MSNAV PLUGIN -->
+    <script type="text/javascript">
+    (function($) {
+        $(document).MSNAV({
+            // the elements than we need to applay the nav plugin on it
+            elements: ["#firstDiv", "#secondDiv", "#lastDiv"],
+            // the element that will wrap the bullets
+            nav: $('#nav'),
+            // the active class name
+            currentClass: "current",
+            // the scrolling speed
+            scrollSpeed: 750
+        });
+    }(jQuery));
+    </script>
+</body>
