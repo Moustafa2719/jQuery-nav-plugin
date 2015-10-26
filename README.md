@@ -13,7 +13,7 @@ git clone https://github.com/EgAlexDeveloper/jQuery-nav-plugin.git
     <script type="text/javascript" src="js/msNav.js"></script>
     
 2- attach them to the html file you use
-3- be sure from adding the nav container to the html and a unique id for each element you use like this
+3- be sure from adding the nav container to the html and a unique id for each element you use like this /n
     <!-- Nav Bar container -->
     <ul id="nav" class="scroller-nav"></ul>
     <!-- Page Elements -->
