@@ -5,7 +5,7 @@ a jQuery plugin can be used to create a flexible one page scroll
 git clone https://github.com/EgAlexDeveloper/jQuery-nav-plugin.git
 
 # How To Use
-1- add jquery.js, msNav.js and style.css to your project
+1- add jquery.js, msNav.js and style.css to your project __
     <!-- the site styles -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- the site scripts -->
