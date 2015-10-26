@@ -1,10 +1,10 @@
 # jQuery-nav-plugin
 a jQuery plugin can be used to create a flexible one page scroll
 
-Install
+# Install
 git clone https://github.com/EgAlexDeveloper/jQuery-nav-plugin.git
 
-How To Use
+# How To Use
 1- add jquery.js, msNav.js and style.css to your project
     <!-- the site styles -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
