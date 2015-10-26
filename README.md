@@ -25,17 +25,17 @@ git clone https://github.com/EgAlexDeveloper/jQuery-nav-plugin.git
     
 4- in the jquery ready function applay the plugin to the document and add all plugins paramaters
 
-<script type="text/javascript">
-    (function($) {
-        $(document).MSNAV({
-            // the elements than we need to applay the nav plugin on it
-            elements: ["#firstDiv", "#secondDiv", "#lastDiv"],
-            // the element that will wrap the bullets
-            nav: $('#nav'),
-            // the active class name
-            currentClass: "current",
-            // the scrolling speed
-            scrollSpeed: 750
-        });
-    }(jQuery));
-</script>
+    <script type="text/javascript">
+        (function($) {
+            $(document).MSNAV({
+                // the elements than we need to applay the nav plugin on it
+                elements: ["#firstDiv", "#secondDiv", "#lastDiv"],
+                // the element that will wrap the bullets
+                nav: $('#nav'),
+                // the active class name
+                currentClass: "current",
+                // the scrolling speed
+                scrollSpeed: 750
+            });
+        }(jQuery));
+    </script>
