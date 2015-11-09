@@ -1,5 +1,5 @@
 # jQuery-nav-plugin
-a jQuery plugin can be used to create a flexible one page scroll
+a jQuery plugin can be used to create a flexible one page scroll with parallex effect
 
 # Install
 git clone https://github.com/EgAlexDeveloper/jQuery-nav-plugin.git
@@ -20,7 +20,9 @@ git clone https://github.com/EgAlexDeveloper/jQuery-nav-plugin.git
     <ul id="nav" class="scroller-nav"></ul>
     <!-- Page Elements -->
     <div id="firstDiv"></div>
+    <div class="parallex first-parallex"></div>
     <div id="secondDiv"></div>
+    <div class="parallex second-parallex"></div>
     <div id="lastDiv"></div>
     
 4- in the jquery ready function applay the plugin to the document and add all plugins paramaters
@@ -30,6 +32,8 @@ git clone https://github.com/EgAlexDeveloper/jQuery-nav-plugin.git
             $(document).MSNAV({
                 // the elements than we need to applay the nav plugin on it
                 elements: ["#firstDiv", "#secondDiv", "#lastDiv"],
+                // optional just required in case you have a parallex sections with background image and you need to animate this image with scrolling
+                parallex: [".first-parallex", ".second-parallex"],
                 // the element that will wrap the bullets
                 nav: $('#nav'),
                 // the active class name
