@@ -15,7 +15,9 @@
     <ul id="nav" class="scroller-nav"></ul>
     <!-- Page Elements -->
     <div id="firstDiv"></div>
+    <div class="parallex first-parallex"></div>
     <div id="secondDiv"></div>
+    <div class="parallex second-parallex"></div>
     <div id="lastDiv"></div>
     <!-- Apply MSNAV PLUGIN -->
     <script type="text/javascript">
@@ -23,6 +25,8 @@
         $(document).MSNAV({
             // the elements than we need to applay the nav plugin on it
             elements: ["#firstDiv", "#secondDiv", "#lastDiv"],
+            // optional just required in case you have a parallex sections with background image and you need to animate this image with scrolling
+            parallex: [".first-parallex", ".second-parallex"],
             // the element that will wrap the bullets
             nav: $('#nav'),
             // the active class name

@@ -1,17 +1,19 @@
 /**
  * Plugin Name : msNAV
  * Discreption : responsible for adding a side navigation to the page to be a one page with scroll control
- * Version	   : 0.1
- * Date 	   : 26/10/2015
- * Auther	   : Moustafa Ahmed, Mohamed saaed]
+ * Version     : 0.2
+ * Date        : 26/10/2015
+ * Auther      : SAVVYARABIA DEVELOPMENT TEAM [Moustafa Ahmed, Mohamed saaed]
  */
 
 jQuery.fn.MSNAV = function(options) {
+    var y = 0;
     // MSNAV default settings:
     var defaults = {
             nav: "",
             currentClass: "",
             elements: [],
+            parallex: [],
             positions: [],
             scrollSpeed: 500
         },
@@ -20,7 +22,7 @@ jQuery.fn.MSNAV = function(options) {
         // the plugin methods
         METHODS = {
             /**
-             * @Method 		: getElementsPositions
+             * @Method      : getElementsPositions
              * @Description : set array contain all elements positions
              */
             'getElementsPositions': function() {
@@ -34,7 +36,7 @@ jQuery.fn.MSNAV = function(options) {
                 });
             },
             /**
-             * @Method 		: appendNavigationBullets
+             * @Method      : appendNavigationBullets
              * @Description : create the bullets of the navigation and handle the click event of each one of theme
              */
             'appendNavigationBullets': function() {
@@ -54,7 +56,7 @@ jQuery.fn.MSNAV = function(options) {
                             // set target
                             target = $(ele).data("target");
                             // animate the screen
-                            METHODS.animatePageScroll(target, i);
+                            METHODS.animatePageScroll(target);
                         });
                     });
                     // handle scrolling method
@@ -62,19 +64,18 @@ jQuery.fn.MSNAV = function(options) {
                 });
             },
             /**
-             * @Method 		   : animatePageScroll
+             * @Method         : animatePageScroll
              * @Description    : animate the screen to the target position
              * @Param {target} : the next position
-             * @Param {i}	   : the number of next element 
              */
-            'animatePageScroll': function(target, i) {
+            'animatePageScroll': function(target) {
                 // animate the page scroll
                 $('html, body').animate({
                     scrollTop: target
                 }, settings.scrollSpeed);
             },
             /**
-             * @Method 		   : searchInRange
+             * @Method         : searchInRange
              * @Description    : get the order of the target element by using manual scrolling and active the bullets
              * @Param {value}  : the value of the scroll top position
              */
@@ -87,6 +88,10 @@ jQuery.fn.MSNAV = function(options) {
                         if (value >= start && value < end) {
                             $(settings.nav).find('a').removeClass(settings.currentClass);
                             $(settings.nav).find('a').eq(settings.positions.indexOf(start)).addClass(settings.currentClass);
+                            // apply the backGround scrolling animation
+                            if (settings.parallex.length > 0) {
+                                $(settings.parallex[settings.positions.indexOf(start)]).css('background-position', 'center ' + value / 30 + 'px');
+                            }
                         }
                     }
                     if (value >= settings.positions[settings.positions.length - 1]) {
@@ -96,7 +101,7 @@ jQuery.fn.MSNAV = function(options) {
                 }
             },
             /**
-             * @Method 		   : handleScrolling
+             * @Method         : handleScrolling
              * @Description    : bind the scrollTop value and path it to the searchInRange Method
              */
             'handleScrolling': function() {
@@ -105,7 +110,7 @@ jQuery.fn.MSNAV = function(options) {
                 });
             },
             /**
-             * @Method 		   : init
+             * @Method         : init
              * @Description    : fire the plugin
              */
             'init': function() {

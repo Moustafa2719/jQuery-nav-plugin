@@ -104,3 +104,17 @@ body. html {
 #lastDiv {
     background-color: #ff0000;
 }
+
+.parallex {
+    background-attachment: fixed !important;
+    background-position: center center;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    width: 100%;
+    min-height: 500px;
+}
+
+.first-parallex,
+.second-parallex {
+    background: url('../images/img.jpg');
+}
